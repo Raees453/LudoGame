@@ -94,7 +94,7 @@ int main()
 #ifdef _WIN32
 			cout << endl << "Arret du jeu..." << endl;
 #else
-			cout << endl << "Arr�t du jeu..." << endl;
+			cout << endl << "Arrêt du jeu..." << endl;
 #endif
 			return 0;
 		}
@@ -104,7 +104,7 @@ int main()
 #ifdef _WIN32
 		cout << endl << idToColor(winner) << "Le joueur " << winner + 1 << " a gagner !" << RESET << endl << endl;
 #else
-		cout << endl << idToColor(winner) << "Le joueur " << winner + 1 << " � gagner !" << RESET << endl << endl;
+		cout << endl << idToColor(winner) << "Le joueur " << winner + 1 << " à gagner !" << RESET << endl << endl;
 #endif
 	}
 
@@ -249,8 +249,8 @@ int play(char board[SIZE][SIZE], int nbPlayer) {
 			cout << "Lancement du de ... Resultat : " << result << endl;
 			cout << "Quelle piece voulez-vous deplacer un lancer de " << result << endl << endl;
 #else
-			cout << "Lancement du d� ... R�sultat : " << result << endl;
-			cout << "Quelle pi�ce voulez-vous d�placer un lancer de " << result << endl << endl;
+			cout << "Lancement du dé ... Résultat : " << result << endl;
+			cout << "Quelle pièce voulez-vous déplacer un lancer de " << result << endl << endl;
 #endif
 			cout << ">";
 			cin >> choice;
