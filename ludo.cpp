@@ -80,7 +80,7 @@ void display(char[SIZE][SIZE]);
 
 int main()
 {
-	srand(std::time(nullptr));
+	srand(static_cast<unsigned int>(std::time(nullptr)));
 
 	char board[SIZE][SIZE];
 	initBoard(board);
@@ -408,7 +408,7 @@ void displayTitle() {
 #ifdef __APPLE__
 	cout << "Apple" << endl;
 	cout << " __________________________________________________________" << endl;
-	cout << "|" < "     __              __         ______                    |" << endl;
+	cout << "|     __              __         ______                    |" << endl;
 	cout << "|    / /   __  ______/ /___     / ____/___ _____ ___  ___  |" << endl;
 	cout << "|   / /   / / / / __  / __ \\   / / __/ __ `/ __ `__ \\/ _ \\ |" << endl;
 	cout << "|  / /___/ /_/ / /_/ / /_/ /  / /_/ / /_/ / / / / / /  __/ |" << endl;
