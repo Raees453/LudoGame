@@ -104,7 +104,7 @@ int main()
 		int winner;
 		winner = play(board, players);
 #ifdef _WIN32
-		cout << endl << "Le joueur " << winner + 1 << " a gagner !" << endl << endl;
+		cout << endl << "Le joueur " << winner + 1 << " (" << idToColor(winner) << ") a gagner !" << endl << endl;
 #else
 		cout << endl << "Le joueur " << winner + 1 << " à gagner !" << endl << endl;
 #endif
@@ -246,7 +246,7 @@ int play(char board[SIZE][SIZE], int nbPlayer) {
 
 		displayCurrent(board, players);
 
-		cout << endl << "C'est au joueur " << (turn + 1) << " de jouer." << endl;
+		cout << endl << "C'est au joueur " << (turn+1) << " (" << idToColor(turn) << ") de jouer." << endl;
 		//int result = (rand() % MAX_DE) + 1;
 		int result = dis(gen);
 
@@ -325,21 +325,21 @@ void verifyInput() {
 	}
 }
 
-/*string idToColor(int id) {
+string idToColor(int id) {
 	switch (id) {
 	case 0:
-		return RED;
+		return "rouge";
 	case 1:
-		return GREEN;
+		return "vert";
 	case 2:
-		return CYAN;
+		return "bleu";
 	case 3:
-		return YELLOW;
+		return "jaune";
 	default:
 		return "";
 	}
 	return "";
-}*/
+}
 
 int getIndexByTurn(int turn) {
 	return turn * 10;
@@ -428,7 +428,7 @@ void displayCurrent(char board[SIZE][SIZE], Player players[MAX_PLAYER][4]) {
 	}
 
 	cout << endl;
-	for (int i = 0; i < SIZE; i++) {
+    for (int i = 0; i < SIZE; i++) {
 		cout << " ";
 		for (int j = 0; j < SIZE; j++) {
 			string s = "";
